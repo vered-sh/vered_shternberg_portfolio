@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vered Shternberg | Senior QA Engineer & SAP Specialist</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            500: '#0284c7',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Rubik', 'Segoe UI', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Rubik', 'Inter', sans-serif;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(229, 231, 235, 0.8);
+        }
+        .dark .glass-card {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(51, 65, 85, 0.5);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #0284c7 0%, #3b82f6 50%, #6366f1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 1.25rem;
+            width: 2px;
+            background: #cbd5e1;
+        }
+        .dark .timeline-line::before {
+            background: #334155;
+        }
+        @media (min-width: 768px) {
+            .timeline-line::before {
+                right: 50%;
+                transform: translateX(50%);
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 min-h-screen flex flex-col">
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 glass-card border-b border-slate-200 dark:border-slate-800 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-600 to-indigo-600 flex items-center justify-center text-white font-bold text-lg shadow-md shadow-sky-500/20 group-hover:scale-105 transition-transform">
+                    VS
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-bold text-lg leading-tight text-slate-900 dark:text-white">Vered Shternberg</span>
+                    <span class="text-xs text-sky-600 dark:text-sky-400 font-medium" dir="ltr">Senior QA Engineer & Specialist</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-600 dark:text-slate-300">
+                <a href="#about" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">אודות</a>
+                <a href="#experience" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">ניסיון מקצועי</a>
+                <a href="#skills" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">כישורים וכלים</a>
+                <a href="#certifications" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">השכלה והסמכות</a>
+                <a href="#contact" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">צור קשר</a>
+            </nav>
+
+            <!-- Actions & Theme Toggle -->
+            <div class="flex items-center gap-3">
+                <button id="themeToggle" class="w-9 h-9 rounded-lg border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" title="החלף ערכת נושא">
+                    <i class="fa-solid fa-moon dark:hidden"></i>
+                    <i class="fa-solid fa-sun hidden dark:block text-amber-400"></i>
+                </button>
+                <a href="#contact" class="hidden sm:inline-flex items-center gap-2 bg-sky-600 hover:bg-sky-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all shadow-md shadow-sky-600/20 hover:shadow-sky-600/30">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>צור קשר</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="about" class="relative overflow-hidden py-16 md:py-24 bg-gradient-to-b from-sky-50/50 via-slate-50 to-slate-50 dark:from-slate-900/50 dark:via-slate-950 dark:to-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-8 space-y-6 text-right">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-sky-100 dark:bg-sky-950/80 border border-sky-200 dark:border-sky-800 text-sky-700 dark:text-sky-300 text-xs font-semibold">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        <span>זמינה למשרות QA בכירות וניהול בדיקות</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white leading-tight">
+                        ורד שטרנברג
+                        <span class="block text-xl sm:text-3xl font-semibold text-slate-600 dark:text-slate-400 mt-2" dir="ltr">
+                            Senior QA Consultant | QA Project Manager | ISTQB Certified
+                        </span>
+                    </h1>
+
+                    <div class="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-3xl space-y-3">
+                        <p>
+                            לאחר מעל <strong>20 שנה בעולמות בדיקות התוכנה</strong> במגוון רחב של פלטפורמות ופרויקטים, נתקלתי שוב ושוב באותו אתגר: אנשי הבדיקות משולבים בתהליך רק <em>לאחר</em> שלב הפיתוח, במקום כבר בשלב הדיזיין.
+                        </p>
+                        <p>
+                            פעם אחר פעם נוכחתי לדעת כי בעיות אפיון בפיצ'רים ובאגים רבים היו יכולים להימנע לחלוטין, ורמת הבדיקות והאיכות הייתה גבוהה בהרבה – לו היו משלבים את הבודקים כבר בשלב הדיזיין והתכנון המוקדם.
+                        </p>
+                        <p class="font-medium text-slate-800 dark:text-slate-200">
+                            אם אתם מחפשים <strong>יועצת בדיקות תוכנה</strong> או <strong>מנהלת פרויקטי QA</strong> שתצלול יחד איתכם לעומק המוצר שלכם – אשמח לעבוד עבורכם!
+                        </p>
+                    </div>
+
+                    <!-- Key Badges -->
+                    <div class="flex flex-wrap gap-2 pt-2" dir="ltr">
+                        <span class="px-3 py-1 rounded-md bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium">SAP S/4HANA & Fiori</span>
+                        <span class="px-3 py-1 rounded-md bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium">ISTQB Certified</span>
+                        <span class="px-3 py-1 rounded-md bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium">Complex SQL (JOINs)</span>
+                        <span class="px-3 py-1 rounded-md bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium">Billing & CRM Systems</span>
+                        <span class="px-3 py-1 rounded-md bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium">Jira & X-Ray</span>
+                        <span class="px-3 py-1 rounded-md bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium">TFS / Azure DevOps</span>
+                        <span class="px-3 py-1 rounded-md bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium">Postman API Testing</span>
+                    </div>
+
+                    <!-- Call to action & Contact links -->
+                    <div class="flex flex-wrap items-center gap-4 pt-4">
+                        <a href="mailto:veredksh1@gmail.com" class="inline-flex items-center gap-2 bg-sky-600 hover:bg-sky-700 text-white px-6 py-3 rounded-xl font-medium shadow-lg shadow-sky-600/25 transition-all hover:scale-105">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>שלח אימייל</span>
+                        </a>
+                        <a href="tel:0537990765" class="inline-flex items-center gap-2 bg-slate-900 dark:bg-slate-800 hover:bg-slate-800 dark:hover:bg-slate-700 text-white px-6 py-3 rounded-xl font-medium shadow-md transition-all hover:scale-105" dir="ltr">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>053-7990765</span>
+                        </a>
+                        <button onclick="window.print()" class="inline-flex items-center gap-2 bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 px-5 py-3 rounded-xl font-medium transition-all">
+                            <i class="fa-solid fa-print"></i>
+                            <span>הדפס / שמור כ-PDF</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Profile Card / Summary Stats -->
+                <div class="lg:col-span-4">
+                    <div class="glass-card p-6 rounded-2xl shadow-xl space-y-6 relative">
+                        <div class="absolute -top-3 -right-3 w-12 h-12 bg-sky-600 text-white rounded-xl flex items-center justify-center text-xl shadow-lg">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        
+                        <div class="text-center pb-4 border-b border-slate-200 dark:border-slate-800">
+                            <div class="w-24 h-24 mx-auto rounded-full bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center text-white text-3xl font-extrabold shadow-lg mb-3">
+                                VS
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">ורד שטרנברג</h3>
+                            <p class="text-sm text-sky-600 dark:text-sky-400 font-medium">QA Specialist & SAP Expert</p>
+                        </div>
+
+                        <!-- Stats grid -->
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="p-3 bg-slate-100 dark:bg-slate-900/60 rounded-xl text-center">
+                                <span class="block text-2xl font-extrabold text-sky-600 dark:text-sky-400">+20</span>
+                                <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">שנות ניסיון</span>
+                            </div>
+                            <div class="p-3 bg-slate-100 dark:bg-slate-900/60 rounded-xl text-center">
+                                <span class="block text-2xl font-extrabold text-sky-600 dark:text-sky-400">3</span>
+                                <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">שנים כראש צוות</span>
+                            </div>
+                            <div class="p-3 bg-slate-100 dark:bg-slate-900/60 rounded-xl text-center">
+                                <span class="block text-2xl font-extrabold text-sky-600 dark:text-sky-400">ISTQB</span>
+                                <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">מוסמכת Agile & FL</span>
+                            </div>
+                            <div class="p-3 bg-slate-100 dark:bg-slate-900/60 rounded-xl text-center">
+                                <span class="block text-2xl font-extrabold text-sky-600 dark:text-sky-400">SAP</span>
+                                <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">S/4HANA & Modules</span>
+                            </div>
+                        </div>
+
+                        <div class="space-y-3 pt-2 text-sm text-slate-600 dark:text-slate-300">
+                            <div class="flex items-center justify-between">
+                                <span class="text-slate-400">אימייל:</span>
+                                <a href="mailto:veredksh1@gmail.com" class="font-medium hover:text-sky-600" dir="ltr">veredksh1@gmail.com</a>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-slate-400">טלפון:</span>
+                                <a href="tel:0537990765" class="font-medium hover:text-sky-600" dir="ltr">053-7990765</a>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-slate-400">שפות:</span>
+                                <span class="font-medium">עברית (שפת אם), אנגלית (מקצועית)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-16 bg-white dark:bg-slate-900 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+                <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white">ניסיון מקצועי עשיר</h2>
+                <p class="text-slate-600 dark:text-slate-400">בדיקות מערכות מידע רחבות היקף, ניהול צוותים ומודולים מורכבים במיזמים מובילים</p>
+                
+                <!-- Filter buttons -->
+                <div class="flex flex-wrap justify-center gap-2 pt-4" id="timelineFilters">
+                    <button data-filter="all" class="filter-btn active px-4 py-2 rounded-lg text-sm font-medium bg-sky-600 text-white transition-all">הכל</button>
+                    <button data-filter="sap" class="filter-btn px-4 py-2 rounded-lg text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all">מערכות SAP & ERP</button>
+                    <button data-filter="hardware" class="filter-btn px-4 py-2 rounded-lg text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all">Hardware & Embedded</button>
+                    <button data-filter="lead" class="filter-btn px-4 py-2 rounded-lg text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all">ניהול צוות / ניהול QA</button>
+                </div>
+            </div>
+
+            <!-- Timeline wrapper -->
+            <div class="relative timeline-line space-y-8 max-w-4xl mx-auto">
+
+                <!-- Item 1: SQlink (2024-2026) -->
+                <div class="timeline-item relative flex flex-col md:flex-row items-start gap-6 group" data-category="sap">
+                    <div class="w-10 h-10 rounded-full bg-sky-600 text-white flex items-center justify-center font-bold text-sm shadow-md z-10 shrink-0 self-start md:mx-auto">
+                        <i class="fa-solid fa-cubes"></i>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl w-full shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded bg-sky-100 dark:bg-sky-950 text-sky-700 dark:text-sky-300" dir="ltr">2024 - 2026</span>
+                            <span class="text-xs text-slate-400 font-medium">SQlink</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white">SAP Quality Management Consultant</h3>
+                        <p class="text-sm font-semibold text-sky-600 dark:text-sky-400 mb-3">יועצת בדיקות איכות SAP בארגון מוניציפלי גדול</p>
+                        <ul class="list-disc list-inside text-sm text-slate-600 dark:text-slate-300 space-y-1.5 leading-relaxed">
+                            <li>אחראית על בדיקות מערכת SAP הארגונית לניהול וריכוז מערך ה-Billing והגבייה, תוך התמחות במודולי **Billing ו-SD** (Sales & Distribution).</li>
+                            <li>ניהול דרישות פרויקט, משימות ותקלות באמצעות **SAP Focused Build** בשילוב **SAP Solution Manager**.</li>
+                            <li>עבודה בסביבות טכנולוגיות מתקדמות: **SAP S/4HANA, SAP Fiori, Microsoft Dynamics CRM**.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Item 2: HP Indigo (2022-2023) -->
+                <div class="timeline-item relative flex flex-col md:flex-row items-start gap-6 group" data-category="hardware">
+                    <div class="w-10 h-10 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold text-sm shadow-md z-10 shrink-0 self-start md:mx-auto">
+                        <i class="fa-solid fa-print"></i>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl w-full shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300" dir="ltr">2022 - 2023</span>
+                            <span class="text-xs text-slate-400 font-medium">HP Indigo</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white">Senior Software & Hardware QA Engineer</h3>
+                        <p class="text-sm font-semibold text-indigo-600 dark:text-indigo-400 mb-3">בדיקות תוכנה וחומרה במעבדה ובסימולטורים עבור מדפסות תעשייתיות</p>
+                        <ul class="list-disc list-inside text-sm text-slate-600 dark:text-slate-300 space-y-1.5 leading-relaxed">
+                            <li>בדיקות פונקציונליות, בדיקות הרצה (Regression) ובדיקות עומסים למדפסות 2D מסחריות/תעשייתיות בתצורות מורכבות.</li>
+                            <li>ניהול סייקלי בדיקות מלאים (Test Suites, Executions, Report Defects) ב-**Jira**.</li>
+                            <li>ניהול מסמכי דרישות, סיכומי בדיקות ודוחות מפורטים ב-**Confluence**.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Item 3: Razel Group (2021-2022) -->
+                <div class="timeline-item relative flex flex-col md:flex-row items-start gap-6 group" data-category="sap">
+                    <div class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-sm shadow-md z-10 shrink-0 self-start md:mx-auto">
+                        <i class="fa-solid fa-hospital"></i>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl w-full shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300" dir="ltr">2021 - 2022</span>
+                            <span class="text-xs text-slate-400 font-medium">Razel Group / שירותי בריאות כללית</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white">Senior Software SAP QA Engineer</h3>
+                        <p class="text-sm font-semibold text-emerald-600 dark:text-emerald-400 mb-3">בדיקות מערכת Billing בשירותי בריאות כללית</p>
+                        <ul class="list-disc list-inside text-sm text-slate-600 dark:text-slate-300 space-y-1.5 leading-relaxed">
+                            <li>עבודה צמודה מול צוות בקרה ותפעול בילינג של שירותי בריאות כללית.</li>
+                            <li>תכנון והרצת בדיקות דרך ממשקי SAP ו-SAP GUI - דגש מיוחד על מודול **FI (Finance)**.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Item 4: ATN Startup (2020-2021) -->
+                <div class="timeline-item relative flex flex-col md:flex-row items-start gap-6 group" data-category="lead">
+                    <div class="w-10 h-10 rounded-full bg-amber-600 text-white flex items-center justify-center font-bold text-sm shadow-md z-10 shrink-0 self-start md:mx-auto">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl w-full shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-300" dir="ltr">2020 - 2021</span>
+                            <span class="text-xs text-slate-400 font-medium">ATN (Startup)</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white">Web & Mobile Test Manager</h3>
+                        <p class="text-sm font-semibold text-amber-600 dark:text-amber-400 mb-3">ניהול מערך הבדיקות לאפליקציות ואתרי Web בעולם הסטארטאפ</p>
+                        <ul class="list-disc list-inside text-sm text-slate-600 dark:text-slate-300 space-y-1.5 leading-relaxed">
+                            <li>ניהול תהליכי QA מקצה לקצה לאפליקציות מובייל ומערכות ווביות.</li>
+                            <li>עבודה בסביבת הייטק דינמית בקצב גבוה.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Item 5: Prime Minister's Office (2019-2020) -->
+                <div class="timeline-item relative flex flex-col md:flex-row items-start gap-6 group" data-category="lead">
+                    <div class="w-10 h-10 rounded-full bg-purple-600 text-white flex items-center justify-center font-bold text-sm shadow-md z-10 shrink-0 self-start md:mx-auto">
+                        <i class="fa-solid fa-user-shield"></i>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl w-full shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300" dir="ltr">2019 - 2020</span>
+                            <span class="text-xs text-slate-400 font-medium">משרד ראש הממשלה (דרך Qualitest)</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white">Senior QA Engineer</h3>
+                        <p class="text-sm font-semibold text-purple-600 dark:text-purple-400 mb-3">אחראית בדיקות ידניות עבור מחלקה שלמה (בעלת סיווג ביטחוני)</p>
+                        <ul class="list-disc list-inside text-sm text-slate-600 dark:text-slate-300 space-y-1.5 leading-relaxed">
+                            <li>בדיקות מערכות פנימיות Desktop / Web רגישות בעלות סיווג גבוה.</li>
+                            <li>כתיבת תוכניות בדיקה (Test Plans) וניהול משימות ותקלות ב-**TFS Azure DevOps Server**.</li>
+                            <li>ביצוע בדיקות API מורכבות באמצעות **Postman**.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Item 6: DSIT Solutions (2008-2019) -->
+                <div class="timeline-item relative flex flex-col md:flex-row items-start gap-6 group" data-category="hardware sap lead">
+                    <div class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-sm shadow-md z-10 shrink-0 self-start md:mx-auto">
+                        <i class="fa-solid fa-[#]">11</i>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl w-full shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300" dir="ltr">2008 - 2019 (11 שנים)</span>
+                            <span class="text-xs text-slate-400 font-medium">DSIT SOLUTIONS Ltd</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white">Senior QA Engineer & QA Team Leader</h3>
+                        <p class="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-3">מגוון תפקידי מפתח בבדיקות מערכות ביטחוניות, SAP ורפואיות</p>
+                        
+                        <div class="space-y-4 mt-4 border-t border-slate-200 dark:border-slate-800 pt-3">
+                            <div>
+                                <h4 class="font-bold text-slate-800 dark:text-slate-200 text-sm">2018-2019: Embedded Systems Test Engineer עבור מערכות רפאל (RAFAEL)</h4>
+                                <p class="text-xs text-slate-600 dark:text-slate-300">הרצת תרחישי בדיקה לחומרה ותוכנה משולבים בעזרת סימולטורים, ציוד קצה מתקדם ופקודות מערכת.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 dark:text-slate-200 text-sm">2017-2018: SAP QA Tester - פרויקט "שביט" (כללית)</h4>
+                                <p class="text-xs text-slate-600 dark:text-slate-300">בדיקות מודולי SAP: CO, PM, FI כחלק מצוות בדיקות קבלה. ניהול תרחישים ו-Bugs ב-Quality Center (QC) ובדיקות הסבת נתונים (Conversion Testing).</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 dark:text-slate-200 text-sm">2014-2017: Software QA Team Leader - מערכת רפואית WEB (Agile Scrum)</h4>
+                                <p class="text-xs text-slate-600 dark:text-slate-300">ניהול צוות בדיקות, ניהול תקלות ודרישות ב-TFS, כתיבת מסמכי גרסה (VDD), ניהול פגישות TRR מול מנהלי מוצר ומפתחים, ניהול לוחות זמנים וסביבות בדיקה.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 dark:text-slate-200 text-sm">2008-2014: Senior QA Engineer - מערכות Billing & CRM (כללית)</h4>
+                                <p class="text-xs text-slate-600 dark:text-slate-300">התמחות במערכות ענק BI, CRM, Billing, כתיבת מסמכי STP/STD/STR, שאילתות SQL מורכבות ברמת JOIN, ובדיקות Client/Server.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 7: Matrix (2005-2008) -->
+                <div class="timeline-item relative flex flex-col md:flex-row items-start gap-6 group" data-category="sap">
+                    <div class="w-10 h-10 rounded-full bg-slate-600 text-white flex items-center justify-center font-bold text-sm shadow-md z-10 shrink-0 self-start md:mx-auto">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl w-full shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300" dir="ltr">2005 - 2008</span>
+                            <span class="text-xs text-slate-400 font-medium">Matrix</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white">Software QA Tester</h3>
+                        <p class="text-sm font-semibold text-slate-600 dark:text-slate-400 mb-2">בדיקות תוכנה עבור משרד המשפטים, מטורולה ודרך ארץ</p>
+                        <p class="text-xs text-slate-600 dark:text-slate-300">בדיקות מערכות WEB למשרד המשפטים, מערכת מטורולה ERP עם בסיס נתונים Oracle, ומערכת Billing & CRM עבור מפעיל כביש 6.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Matrix Section -->
+    <section id="skills" class="py-16 bg-slate-50 dark:bg-slate-950 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+                <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white">כישורים, כלים וטכנולוגיות</h2>
+                <p class="text-slate-600 dark:text-slate-400">ארגז הכלים המקצועי שנבנה ונבחן לאורך 20 שנות עבודה בתעשייה</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Skill Card 1 -->
+                <div class="glass-card p-6 rounded-2xl space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-sky-100 dark:bg-sky-950 text-sky-600 dark:text-sky-400 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white">מערכות ERP & Enterprise</h3>
+                    <div class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+                        <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-1.5">
+                            <span>SAP S/4HANA & Fiori</span>
+                            <span class="text-xs font-bold text-sky-600">רמה גבוהה</span>
+                        </div>
+                        <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-1.5">
+                            <span>SAP Billing & SD Modules</span>
+                            <span class="text-xs font-bold text-sky-600">מומחיות</span>
+                        </div>
+                        <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-1.5">
+                            <span>SAP FI / CO / PM Modules</span>
+                            <span class="text-xs font-bold text-sky-600">ניסיון רב</span>
+                        </div>
+                        <div class="flex items-center justify-between pb-1">
+                            <span>MS Dynamics CRM & Oracle ERP</span>
+                            <span class="text-xs font-bold text-sky-600">רמה גבוהה</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Card 2 -->
+                <div class="glass-card p-6 rounded-2xl space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-[#]">QC</i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white">כלי ניהול בדיקות ו-Bugs</h3>
+                    <div class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+                        <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-1.5">
+                            <span>Jira & Jira-X-Ray</span>
+                            <span class="text-xs font-bold text-indigo-600">שימוש יומי</span>
+                        </div>
+                        <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-1.5">
+                            <span>SAP Focused Build / Solution Manager</span>
+                            <span class="text-xs font-bold text-indigo-600">שימוש יומי</span>
+                        </div>
+                        <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-1.5">
+                            <span>TFS / Azure DevOps Server</span>
+                            <span class="text-xs font-bold text-indigo-600">מומחיות</span>
+                        </div>
+                        <div class="flex items-center justify-between pb-1">
+                            <span>Quality Center (QC) & StarTeam</span>
+                            <span class="text-xs font-bold text-indigo-600">ניסיון רב</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Card 3 -->
+                <div class="glass-card p-6 rounded-2xl space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white">בסיסי נתונים ו-API</h3>
+                    <div class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+                        <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-1.5">
+                            <span>SQL Queries (Complex JOINs)</span>
+                            <span class="text-xs font-bold text-emerald-600">רמה מתקדמת</span>
+                        </div>
+                        <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-1.5">
+                            <span>Postman (API Testing)</span>
+                            <span class="text-xs font-bold text-emerald-600">ניסיון מעשי</span>
+                        </div>
+                        <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-1.5">
+                            <span>Client / Server Integration</span>
+                            <span class="text-xs font-bold text-emerald-600">שליטה מלאה</span>
+                        </div>
+                        <div class="flex items-center justify-between pb-1">
+                            <span>Selenium & Java (Automation)</span>
+                            <span class="text-xs font-bold text-emerald-600">רקע והסמכה</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Card 4 -->
+                <div class="glass-card p-6 rounded-2xl space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-purple-100 dark:bg-purple-950 text-purple-600 dark:text-purple-400 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-file-signature"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white">תיעוד ומתודולוגיות</h3>
+                    <div class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+                        <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-1.5">
+                            <span>כתיבת מסמכי STP / STD / STR</span>
+                            <span class="text-xs font-bold text-purple-600">מלאה</span>
+                        </div>
+                        <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-1.5">
+                            <span>Agile / Scrum & V-Model</span>
+                            <span class="text-xs font-bold text-purple-600">מוסמכת</span>
+                        </div>
+                        <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-1.5">
+                            <span>מסמכי גרסה (VDD) ופגישות TRR</span>
+                            <span class="text-xs font-bold text-purple-600">ניסיון ניהולי</span>
+                        </div>
+                        <div class="flex items-center justify-between pb-1">
+                            <span>בדיקות הסבה (Conversion Testing)</span>
+                            <span class="text-xs font-bold text-purple-600">ניסיון מעשי</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Card 5 -->
+                <div class="glass-card p-6 rounded-2xl space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-amber-100 dark:bg-amber-950 text-amber-600 dark:text-amber-400 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white">סביבות וסוגי בדיקות</h3>
+                    <div class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+                        <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-1.5">
+                            <span>Core / Server / Client</span>
+                            <span class="text-xs font-bold text-amber-600">כיסוי מלא</span>
+                        </div>
+                        <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-1.5">
+                            <span>WEB & Mobile Applications</span>
+                            <span class="text-xs font-bold text-amber-600">מומחיות</span>
+                        </div>
+                        <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-1.5">
+                            <span>Hardware & Simulators Lab</span>
+                            <span class="text-xs font-bold text-amber-600">ניסיון תעשייתי</span>
+                        </div>
+                        <div class="flex items-center justify-between pb-1">
+                            <span>Load, Regression & Functional</span>
+                            <span class="text-xs font-bold text-amber-600">שליטה מלאה</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Card 6 -->
+                <div class="glass-card p-6 rounded-2xl space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-rose-100 dark:bg-rose-950 text-rose-600 dark:text-rose-400 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-users-gear"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white">כישורים אישיים וניהוליים</h3>
+                    <div class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+                        <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-1.5">
+                            <span>ניהול צוות והובלת משימות</span>
+                            <span class="text-xs font-bold text-rose-600">3 שנות ניסיון</span>
+                        </div>
+                        <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-1.5">
+                            <span>ראייה מערכתית וירידה לפרטים</span>
+                            <span class="text-xs font-bold text-rose-600">גבוהה מאוד</span>
+                        </div>
+                        <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-1.5">
+                            <span>עבודה מול מנהלי מוצר ומפתחים</span>
+                            <span class="text-xs font-bold text-rose-600">תקשורת מעולה</span>
+                        </div>
+                        <div class="flex items-center justify-between pb-1">
+                            <span>עבודה בסביבה גלובלית באנגלית</span>
+                            <span class="text-xs font-bold text-rose-600">רמה מקצועית</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certifications -->
+    <section id="certifications" class="py-16 bg-white dark:bg-slate-900 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                
+                <!-- Education & Certification Column -->
+                <div class="space-y-6">
+                    <h2 class="text-2xl font-extrabold text-slate-900 dark:text-white flex items-center gap-3">
+                        <i class="fa-solid fa-graduation-cap text-sky-600"></i>
+                        <span>השכלה והסמכות מקצועיות</span>
+                    </h2>
+
+                    <div class="space-y-4">
+                        <!-- Card 1 -->
+                        <div class="glass-card p-5 rounded-xl flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-sky-100 dark:bg-sky-950 text-sky-600 flex items-center justify-center shrink-0 font-bold">
+                                <i class="fa-solid fa-certificate"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900 dark:text-white">ISTQB Certified</h3>
+                                <p class="text-sm text-sky-600 dark:text-sky-400 font-medium">Agile Tester Certified | Foundation Level Tester Certified</p>
+                                <p class="text-xs text-slate-500 mt-1">מכללת "סלע" (Sela College)</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="glass-card p-5 rounded-xl flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-indigo-100 dark:bg-indigo-950 text-indigo-600 flex items-center justify-center shrink-0 font-bold">
+                                <i class="fa-solid fa-user-graduate"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900 dark:text-white">מהנדסת תוכנה / דיפלומה במדעי המחשב</h3>
+                                <p class="text-sm text-slate-600 dark:text-slate-300">המכללה החרדית לטכנולוגיה</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="glass-card p-5 rounded-xl flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-emerald-100 dark:bg-emerald-950 text-emerald-600 flex items-center justify-center shrink-0 font-bold">
+                                <i class="fa-solid fa-robot"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900 dark:text-white">קורס אוטומציה (Selenium & Java)</h3>
+                                <p class="text-sm text-slate-600 dark:text-slate-300">כתיבת קוד ב-Java ושימוש ב-Selenium - מכללת INT</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="glass-card p-5 rounded-xl flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-purple-100 dark:bg-purple-950 text-purple-600 flex items-center justify-center shrink-0 font-bold">
+                                <i class="fa-solid fa-database"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900 dark:text-white">קורס יישומי Oracle</h3>
+                                <p class="text-sm text-slate-600 dark:text-slate-300">מכללת ג'ון ברייס (John Bryce College)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Volunteering & Languages Column -->
+                <div class="space-y-6">
+                    <h2 class="text-2xl font-extrabold text-slate-900 dark:text-white flex items-center gap-3">
+                        <i class="fa-solid fa-heart text-rose-600"></i>
+                        <span>התנדבות ושפות</span>
+                    </h2>
+
+                    <div class="space-y-4">
+                        <!-- Volunteering -->
+                        <div class="glass-card p-6 rounded-xl space-y-3">
+                            <div class="flex items-center gap-3 text-rose-600 font-bold text-lg">
+                                <i class="fa-solid fa-hand-holding-heart"></i>
+                                <span>תרומה לקהילה - פרויקט הילה</span>
+                            </div>
+                            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                                הוראה והעברת קורס בדיקות תוכנה ידניות עבור בני נוער בסיכון במסגרת פרויקט "הילה", מתוך שליחות להקנות להם מקצוע מבוקש וכלים להשתלבות בעולם הייטק.
+                            </p>
+                        </div>
+
+                        <!-- Languages -->
+                        <div class="glass-card p-6 rounded-xl space-y-4">
+                            <h3 class="font-bold text-slate-900 dark:text-white text-lg flex items-center gap-2">
+                                <i class="fa-solid fa-language text-sky-600"></i>
+                                <span>שפות</span>
+                            </h3>
+                            <div class="grid grid-cols-2 gap-4 text-center">
+                                <div class="p-4 bg-slate-100 dark:bg-slate-950 rounded-lg">
+                                    <span class="block font-bold text-slate-900 dark:text-white text-base">עברית</span>
+                                    <span class="text-xs text-sky-600 font-medium">שפת אם</span>
+                                </div>
+                                <div class="p-4 bg-slate-100 dark:bg-slate-950 rounded-lg">
+                                    <span class="block font-bold text-slate-900 dark:text-white text-base">אנגלית</span>
+                                    <span class="text-xs text-sky-600 font-medium">רמה מקצועית / חברות גלובליות</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-slate-50 dark:bg-slate-950 transition-colors">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card p-8 md:p-12 rounded-3xl shadow-xl text-center space-y-8">
+                <div>
+                    <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white">בואו נשתף פעולה</h2>
+                    <p class="text-slate-600 dark:text-slate-400 mt-2">מעוניינים בבודקת תוכנה בכירה / מובילת איכות עם ניסיון מוכח במערכות מורכבות?</p>
+                </div>
+
+                <!-- Direct Contact Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <a href="tel:0537990765" class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-sky-500 transition-all flex items-center justify-center gap-4 group">
+                        <div class="w-12 h-12 rounded-full bg-sky-100 dark:bg-sky-950 text-sky-600 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="text-right">
+                            <span class="block text-xs text-slate-400 font-medium">טלפון נייד</span>
+                            <span class="font-bold text-slate-900 dark:text-white" dir="ltr">053-7990765</span>
+                        </div>
+                    </a>
+
+                    <a href="mailto:veredksh1@gmail.com" class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-sky-500 transition-all flex items-center justify-center gap-4 group">
+                        <div class="w-12 h-12 rounded-full bg-sky-100 dark:bg-sky-950 text-sky-600 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="text-right">
+                            <span class="block text-xs text-slate-400 font-medium">דואר אלקטרוני</span>
+                            <span class="font-bold text-slate-900 dark:text-white" dir="ltr">veredksh1@gmail.com</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Quick Message Form -->
+                <form id="contactForm" class="space-y-4 text-right">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-600 dark:text-slate-400 mb-1">שם מלא / שם החברה</label>
+                            <input type="text" required placeholder="לדוגמה: יובל ממעבדות תוכנה" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-2 focus:ring-sky-500 focus:outline-none transition-all text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-600 dark:text-slate-400 mb-1">דוא"ל לחזרה</label>
+                            <input type="email" required placeholder="your@email.com" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-2 focus:ring-sky-500 focus:outline-none transition-all text-sm" dir="ltr">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 dark:text-slate-400 mb-1">הודעה</label>
+                        <textarea rows="4" required placeholder="נשמח לתאם עמך ראיון עבודה..." class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-2 focus:ring-sky-500 focus:outline-none transition-all text-sm"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-gradient-to-r from-sky-600 to-indigo-600 hover:from-sky-700 hover:to-indigo-700 text-white font-bold py-3.5 rounded-xl shadow-lg shadow-sky-600/20 transition-all hover:scale-[1.01]">
+                        שלח הודעה לורד
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2">
+                <div class="w-7 h-7 rounded-lg bg-sky-600 text-white flex items-center justify-center font-bold text-xs">VS</div>
+                <span class="text-white font-semibold">Vered Shternberg</span>
+                <span>© 2026 - כל הזכויות שמורות</span>
+            </div>
+            <div class="flex items-center gap-6" dir="ltr">
+                <a href="mailto:veredksh1@gmail.com" class="hover:text-white transition-colors"><i class="fa-solid fa-envelope"></i> veredksh1@gmail.com</a>
+                <a href="tel:0537990765" class="hover:text-white transition-colors"><i class="fa-solid fa-phone"></i> 053-7990765</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification Box -->
+    <div id="toast" class="fixed bottom-6 left-6 bg-emerald-600 text-white px-5 py-3 rounded-xl shadow-2xl flex items-center gap-3 transform translate-y-20 opacity-0 transition-all duration-300 z-50">
+        <i class="fa-solid fa-circle-check text-xl"></i>
+        <span id="toastMsg" class="font-medium text-sm">ההודעה נשלחה בהצלחה!</span>
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Theme Toggle Logic
+        const themeToggleBtn = document.getElementById('themeToggle');
+        
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+        });
+
+        // Experience Timeline Filter Logic
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const timelineItems = document.querySelectorAll('.timeline-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all
+                filterBtns.forEach(b => {
+                    b.classList.remove('active', 'bg-sky-600', 'text-white');
+                    b.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
+                });
+                // Add active to clicked
+                btn.classList.add('active', 'bg-sky-600', 'text-white');
+                btn.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
+
+                const filter = btn.getAttribute('data-filter');
+
+                timelineItems.forEach(item => {
+                    const categories = item.getAttribute('data-category');
+                    if (filter === 'all' || categories.includes(filter)) {
+                        item.style.display = 'flex';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Contact Form Handlers (No alert used)
+        const contactForm = document.getElementById('contactForm');
+        const toast = document.getElementById('toast');
+        const toastMsg = document.getElementById('toastMsg');
+
+        function showToast(message) {
+            toastMsg.textContent = message;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 4000);
+        }
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            showToast('תודה! הודעתך התקבלה ותענה בהקדם.');
+            contactForm.reset();
+        });
+    </script>
+</body>
+</html>
